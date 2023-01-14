@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --white: #ffff;
+    --bg2: #DFE6FB;
+}
+
+body{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: var(--Pale-blue);
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+}
+
+body::before{
+    content: "";
+    display: inline-block;
+    background-image: url(./images/pattern-background-desktop.svg);
+    height: 390px;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+main{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 25% auto 0;
+    width: 320px;
+    height: auto;
+    background: var(--white);
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+.container > img{
+    border-radius: 20px 20px 0 0;
+}
+
+.container > h1{
+    color: var(--Dark-blue);
+    margin-top: 1rem;
+    font-weight: 900;
+}
+
+.container > p{
+    font-size: 14px;
+    color: var(--Desaturated-blue);
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 80%;
+    background: var(--Very-pale-blue);
+    padding: .7rem;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.plan-left{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.plan-left > img{
+    max-width: 26%;
+}
+
+.plan-left-join > h3{
+    color: var(--Dark-blue);
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.plan-left-join > p{
+    color: var(--Desaturated-blue);
+}
+
+section > input{
+    border: none;
+    background: transparent;
+    color: var(--Bright-blue);
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container > button{
+    margin: 0 auto;
+    width: 90%;
+    padding: .7rem;
+    background: var(--Bright-blue);
+    border: none;
+    border-radius: 10px;
+    color: var(--Very-pale-blue);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 18px 10px var(--bg2);
+}
+
+.container > input{
+    margin: 0 auto;
+    width: max-content;
+    border: none;
+    background: transparent;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+}
+
+.container > input:hover{
+    color: var(--Dark-blue);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: auto;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 375px){
+    body::before{
+        background-image: url(./images/pattern-background-mobile.svg);
+        height: 220px;
+    }
+
+    .container > p{
+        margin: 0 10%;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .container > button{
+        margin-top: 1rem;
+        padding: .9rem;
+    }
+}
