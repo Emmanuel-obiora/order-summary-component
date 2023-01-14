@@ -75,7 +75,7 @@ main{
     color: var(--Desaturated-blue);
 }
 
-section{
+.plan{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@ section{
     max-width: 26%;
 }
 
-.plan-left-join > h3{
+.plan-left-join > h2{
     color: var(--Dark-blue);
     font-weight: 900;
     font-size: 14px;
@@ -108,7 +108,7 @@ section{
     color: var(--Desaturated-blue);
 }
 
-section > input{
+.plan > input{
     border: none;
     background: transparent;
     color: var(--Bright-blue);
